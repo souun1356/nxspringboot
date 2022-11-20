@@ -20,6 +20,8 @@ SpringBoot learning.
 - 建置 nx 專案
   - npx create-nx-workspace@latest --style=scss --name=nx --appName=frontend --preset=angular
   - npm install -g nx
+  - npm install --force (無法啟動專案時)
+  - 出現 JAVA_HOME 找不到時，自已加環境變數
 - 建置 backend springboot 專案
   - npm i @nxrocks/nx-spring-boot -D --legacy-peer-deps
   - nx g @nxrocks/nx-spring-boot:new backend
@@ -84,7 +86,7 @@ public class Ch02Controller {
 
 根據上下行電文 json，建立 java 相關物件
 
-- 上行電文
+- 上行電文(上文 request)
 
 ```json
 {
@@ -100,7 +102,7 @@ public class Ch02Controller {
 }
 ```
 
-- 下行電文
+- 下行電文(下文 response)
 
 ```json
 {
@@ -256,11 +258,9 @@ public class Ch09Controller {
 
 ### TODO
 
-- 建立個人的 github 帳號，fork 本專案 and pull request（PR 前需先 git rebase）
-- 建立本機 postgresql、mysql database
+- 建立個人的 github 帳號，fork 本專案 and pull request (PR 前需先 git rebase)
+- 建立本機 postgresql(5432)、mysql(3306) database
 - 建立 config 目錄，設定 Multiple Data Sources
-- save or update 需同時寫入 database，且需要事務處理機制
-- 使用 thymeleaf 印出所有客戶資料在 table 上
-- 組件化 thymeleaf customer table，讓其他畫面可以 include
+- save or update 需同時寫入 database, 且需要事務處理機制
 - 小組討論畫面設計，依據畫面設計 table 等相關 api 功能
-- 挑戰：改使用 r2dbc 的 webflux 方式改寫 api
+- 挑戰:改使用 r2dbc 的 webflux 方式改寫 api
