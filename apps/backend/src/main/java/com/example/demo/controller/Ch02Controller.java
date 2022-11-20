@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @CrossOrigin
 @RestController
 public class Ch02Controller {
-    // application.properties 設定使用哪個-xx.properties設定檔
+    // application.properties 設定使用哪個-xx.properties環境設定檔
     // 設定檔的鍵值env.name，對應屬性envName
     @Value("${env.name}")
     private String envName;
