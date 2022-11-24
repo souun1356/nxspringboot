@@ -7,7 +7,7 @@
     "serve": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["mvnw jetty:run"],
+        "commands": ["./mvnw jetty:run"],
         "cwd": "apps/servlet-api"
       }
     }
