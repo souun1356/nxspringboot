@@ -26,7 +26,7 @@
     <table>
       <c:forEach items="${dataList}" var="row">
       <tr>
-        <td><c:out value="${row.id}"/></td>
+        <td><c:out value="${row.code}"/></td>
         <td><c:out value="${row.name}"/></td>
         <td><c:out value="${row.fathercode}"/></td>
       </tr>
