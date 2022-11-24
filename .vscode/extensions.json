@@ -13,6 +13,8 @@
     "AntiAntiSepticeye.vscode-color-picker",
     "DotJoshJohnson.xml",
     "vscode-icons-team.vscode-icons",
-    "redhat.fabric8-analytics"
+    "redhat.fabric8-analytics",
+    "formulahendry.vscode-mysql",
+    "ruiquelhas.vscode-uppercase"
   ]
 }

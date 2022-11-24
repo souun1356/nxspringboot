@@ -4,7 +4,7 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
   <servlet>
     <servlet-name>HelloWorld</servlet-name>
-    <servlet-class>com.example.demo.HelloWorld</servlet-class>
+    <servlet-class>com.example.demo.servlet.HelloWorld</servlet-class>
     <load-on-startup>1</load-on-startup>
   </servlet>
   <servlet-mapping>
@@ -14,11 +14,29 @@
 
   <servlet>
     <servlet-name>Test</servlet-name>
-    <servlet-class>com.example.demo.Test</servlet-class>
+    <servlet-class>com.example.demo.servlet.Test</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>Test</servlet-name>
     <url-pattern>/test</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>Category</servlet-name>
+    <servlet-class>com.example.demo.servlet.CategoryServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Category</servlet-name>
+    <url-pattern>/category</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>CategoryDao</servlet-name>
+    <servlet-class>com.example.demo.servlet.CategoryDaoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CategoryDao</servlet-name>
+    <url-pattern>/categoryDao</url-pattern>
   </servlet-mapping>
 
 </web-app>

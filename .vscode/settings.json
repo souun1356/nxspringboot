@@ -34,7 +34,8 @@
   "java.import.generatesMetadataFilesAtProjectRoot": true,
   "java.inlayHints.parameterNames.enabled": "none",
   "[html]": {
-    "editor.formatOnSave": false
+    "editor.formatOnSave": false,
+    "editor.defaultFormatter": "vscode.html-language-features"
   },
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.enablePersistentSessions": false

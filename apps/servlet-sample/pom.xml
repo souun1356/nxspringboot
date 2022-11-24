@@ -12,9 +12,10 @@
     <java.version>17</java.version>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
     <jetty.version>9.4.49.v20220914</jetty.version>
-    <jetty.http.port>8081</jetty.http.port>
+    <jetty.http.port>8080</jetty.http.port>
     <jetty.webApp.contextPath>/demo</jetty.webApp.contextPath>
   </properties>
 
@@ -27,9 +28,15 @@
     </dependency>
 
     <dependency>
-      <groupId>org.eclipse.jetty</groupId>
-      <artifactId>jetty-server</artifactId>
-      <version>${jetty.version}</version>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.30</version>
+    </dependency>
+
+    <dependency>
+      <groupId>commons-dbutils</groupId>
+      <artifactId>commons-dbutils</artifactId>
+      <version>1.7</version>
     </dependency>
 
   </dependencies>
@@ -41,6 +48,7 @@
         <artifactId>jetty-maven-plugin</artifactId>
         <version>${jetty.version}</version>
         <configuration>
+          <scanIntervalSeconds>2</scanIntervalSeconds>
           <webApp>
             <contextPath>${jetty.webApp.contextPath}</contextPath>
           </webApp>
