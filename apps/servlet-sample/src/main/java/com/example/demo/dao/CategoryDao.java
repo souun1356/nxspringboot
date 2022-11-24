@@ -7,13 +7,13 @@ import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 import com.example.demo.domain.Category;
-import com.example.demo.util.DataSourceUtils;
+import com.example.demo.util.JdbcUtils;
 
 public class CategoryDao {
 
   public List<Category> findAll() throws SQLException {
     String sql = "SELECT * FROM CATEGORY";
     QueryRunner runner = new QueryRunner();
-    return runner.query(DataSourceUtils.getConnection(), sql, new BeanListHandler<Category>(Category.class));
+    return runner.query(JdbcUtils.getConnection(), sql, new BeanListHandler<Category>(Category.class));
   }
 }

@@ -39,4 +39,13 @@
     <url-pattern>/categoryDao</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>Products</servlet-name>
+    <servlet-class>com.example.demo.servlet.ProductsServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Products</servlet-name>
+    <url-pattern>/products</url-pattern>
+  </servlet-mapping>
+
 </web-app>

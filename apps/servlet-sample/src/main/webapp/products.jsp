@@ -24,11 +24,16 @@
     jstl: <c:out value="${jstl}"/>
 
     <table>
-      <c:forEach items="${dataList}" var="row">
+      <c:forEach items="${dataList2}" var="row">
       <tr>
         <td><c:out value="${row.id}"/></td>
         <td><c:out value="${row.name}"/></td>
-        <td><c:out value="${row.fathercode}"/></td>
+        <td><c:out value="${row.price}"/></td>
+        <td><c:out value="${row.pnum}"/></td>
+        <td><c:out value="${row.c3code}"/></td>
+        <td><c:out value="${row.imgurl}"/></td>
+        <td><c:out value="${row.description}"/></td>
+        <td><c:out value="${row.color}"/></td>
       </tr>
       </c:forEach>
     </table>
