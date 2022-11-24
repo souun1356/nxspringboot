@@ -31,5 +31,11 @@
     "plaintext": "ts"
   },
   "scss.lint.unknownAtRules": "ignore",
-  "java.import.generatesMetadataFilesAtProjectRoot": true
+  "java.import.generatesMetadataFilesAtProjectRoot": true,
+  "java.inlayHints.parameterNames.enabled": "none",
+  "[html]": {
+    "editor.formatOnSave": false
+  },
+  "terminal.integrated.persistentSessionReviveProcess": "never",
+  "terminal.integrated.enablePersistentSessions": false
 }

@@ -254,6 +254,13 @@ public class Ch09Controller {
 - hello.html 需增加 `xmlns:th="http://www.thymeleaf.org"` 屬性
 - 使用 th:text 印出後端的傳遞的資料
 
+### ch10
+
+學習 servlet
+
+- nx serve servlet-sample
+- http://localhost:8081/demo
+
 ### TODO
 
 - 建立個人的 github 帳號，fork 本專案 and pull request（PR 前需先 git rebase）

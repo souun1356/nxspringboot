@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "servlet-sample",
+  "sourceRoot": "apps/servlet-sample/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["mvnw jetty:run"],
+        "cwd": "apps/servlet-sample"
+      }
+    }
+  },
+  "tags": []
+}
