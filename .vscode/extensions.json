@@ -12,6 +12,7 @@
     "Pivotal.vscode-boot-dev-pack",
     "AntiAntiSepticeye.vscode-color-picker",
     "DotJoshJohnson.xml",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "redhat.fabric8-analytics"
   ]
 }

@@ -256,10 +256,17 @@ public class Ch09Controller {
 
 ### ch10
 
-學習 servlet
+學習用 servlet 印出 hello world
 
 - nx serve servlet-sample
 - http://localhost:8081/demo
+
+### ch11
+
+學習用 servlet 產生 api
+
+- nx serve servlet-api
+- http://localhost:8082/demo
 
 ### TODO
 
