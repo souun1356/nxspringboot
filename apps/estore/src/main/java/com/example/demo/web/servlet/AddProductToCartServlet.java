@@ -70,8 +70,8 @@ public class AddProductToCartServlet extends HttpServlet {
 
       response.sendRedirect(request.getContextPath() + "/addProductToCartSuccessfull.jsp");
       // response.getWriter().write("添加商品到購物車成功，<a
-      // href='http://localhost:8080/Estore'>繼續購物</a>,<a
-      // href='http://localhost:8080/Estore/showcart.jsp'>查看購物車</a>");
+      // href='http://localhost:8080/estore'>繼續購物</a>,<a
+      // href='http://localhost:8080/estore/showcart.jsp'>查看購物車</a>");
       return;
 
     } catch (SQLException e) {

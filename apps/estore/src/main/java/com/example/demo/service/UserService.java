@@ -23,7 +23,7 @@ public class UserService {
       dao.addUser(user);
       // 2.向註冊用戶發送激活郵件
       String emailMsg = "註冊成功，請點擊下列連接已完成激活操作:(ps:由於郵箱原因，請複製鏈接打開！)" + "<br>" +
-          "http://localhost:8080/Estore/UserActiveServlet?activeCode=" + user.getActivecode();
+          "http://localhost:8080/estore/UserActiveServlet?activeCode=" + user.getActivecode();
       MailUtils.sendMail(user.getEmail(), emailMsg);
     } catch (SQLException e) {
       throw new RegistException("註冊失敗");

@@ -41,7 +41,7 @@ public class UserActiveServlet extends HttpServlet {
       service.activeUser(activeCode);
 
       response.getWriter().write(
-          "激活成功，請回<a href='http://localhost:8080/Estore'>首頁</a>");
+          "激活成功，請回<a href='http://localhost:8080/estore'>首頁</a>");
       return;
 
     } catch (ActiveCodeException e) {

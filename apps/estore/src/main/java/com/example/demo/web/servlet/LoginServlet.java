@@ -109,7 +109,7 @@ public class LoginServlet extends HttpServlet {
 
       request.getSession().setAttribute("user", user1);// 登錄成功，將user存儲到session中.
 
-      response.sendRedirect("http://localhost:8080/Estore"); // 請求轉發只能在本站內跳轉........登錄成功應該加上用戶信息*******
+      response.sendRedirect("http://localhost:8080/estore"); // 請求轉發只能在本站內跳轉........登錄成功應該加上用戶信息*******
       return;
 
     } catch (ActiveCodeException e) {
