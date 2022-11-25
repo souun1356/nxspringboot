@@ -1,0 +1,16 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "estore",
+  "sourceRoot": "apps/estore/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["mvnw jetty:run"],
+        "cwd": "apps/estore"
+      }
+    }
+  },
+  "tags": []
+}
