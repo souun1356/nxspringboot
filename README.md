@@ -273,7 +273,7 @@ public class Ch09Controller {
 學習用 servlet 產生 api
 
 - nx serve servlet-api
-- http://localhost:8080/demo
+- http://localhost:8080/demo/hello
 
 ### TODO
 
