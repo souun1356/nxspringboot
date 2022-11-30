@@ -17,44 +17,51 @@ import com.example.demo.dto.CustomerResponseBody;
 import com.example.demo.entity.Customer;
 import com.example.demo.service.CustomerService;
 
+// 用性別查詢客戶
 @CrossOrigin
 @RestController
 public class Ch05Controller {
+    @Autowired
+    public CustomerService customerService;
 
-  @Autowired
-  public CustomerService customerService;
+    @PostMapping("/ch05")
+    public CustomerResponse ch05(@RequestBody CustomerRequest request) {
+        CustomerResponse response = new CustomerResponse();
+        List<CustomerResponseBody> dataList = new LinkedList<>();
 
-  @PostMapping("/ch05")
-  public CustomerResponse ch05(@RequestBody CustomerRequest request) {
-    CustomerResponse response = new CustomerResponse();
-    List<CustomerResponseBody> dataList = new LinkedList<>();
+        CommonHeaderResponse header = new CommonHeaderResponse();
+        BeanUtils.copyProperties(request.getHeader(), header);
 
-    CommonHeaderResponse header = new CommonHeaderResponse();
-    BeanUtils.copyProperties(request.getHeader(), header);
+        String gender = request.getBody().getGender();
+        // List<Customer> customers = this.customerService.findByGender(gender);
+        // var customers = this.customerService.findCustomerByGender(gender);
+        // var customers = this.customerService.findAllCustomersByGenderNative(gender);
+        var customers = this.customerService.findCustomerByGenderStream(gender);
+        // var customers = this.customerService.findCustomerNameByGenderNative(gender);
 
-    String gender = request.getBody().getGender();
-    List<Customer> customers = this.customerService.findByGender(gender);
-    // var customers = this.customerService.findAllCustomersByGenderNative(gender);
-    // var customers = this.customerService.findAllMaleCustomersNative();
-    // var customers = this.customerService.findAllCustomersByGenderNative(gender);
+        // var customers = this.customerService.findAllMaleCustomers();
+        // var customers = this.customerService.findAllMaleCustomersNative();
 
-    if (customers != null && !customers.isEmpty()) {
-      header.setCode("0000");
-      header.setMsg("成功");
+        if (customers != null && !customers.isEmpty()) {
+            header.setCode("0000");
+            header.setMsg("成功");
 
-      for (Customer customer : customers) {
-        CustomerResponseBody responseBody = new CustomerResponseBody();
-        BeanUtils.copyProperties(customer, responseBody);
-        dataList.add(responseBody);
-      }
-    } else {
-      header.setCode("9999");
-      header.setMsg("查無資料");
+            // 多表的interface型態
+            // for (CustomerResponseDtoBody customer : customers) {
+            for (Customer customer : customers) {
+                CustomerResponseBody responseBody = new CustomerResponseBody();
+                BeanUtils.copyProperties(customer, responseBody);
+                dataList.add(responseBody);
+            }
+        } else {
+            header.setCode("9999");
+            header.setMsg("查無資料");
+        }
+
+        response.setHeader(header);
+        response.setBody(dataList);
+
+        return response;
     }
 
-    response.setHeader(header);
-    response.setBody(dataList);
-
-    return response;
-  }
 }

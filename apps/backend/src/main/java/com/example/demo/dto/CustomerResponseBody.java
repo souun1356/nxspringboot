@@ -14,19 +14,18 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CustomerResponseBody {
+    @JsonProperty("customerId")
+    public String customerId;
 
-  @JsonProperty("customerId")
-  public String customerId;
+    @JsonProperty("name")
+    public String name;
 
-  @JsonProperty("name")
-  public String name;
+    @JsonProperty("age")
+    public BigDecimal age;
 
-  @JsonProperty("age")
-  public BigDecimal age;
+    @JsonProperty("tel")
+    public String tel;
 
-  @JsonProperty("tel")
-  public String tel;
-
-  @JsonProperty("addr")
-  public String addr;
+    @JsonProperty("addr")
+    public String addr;
 }

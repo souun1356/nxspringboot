@@ -12,16 +12,15 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CommonHeader {
+    @JsonProperty("funId")
+    public String funId;
 
-  @JsonProperty("funId")
-  public String funId;
+    @JsonProperty("key")
+    public String key;
 
-  @JsonProperty("key")
-  public String key;
+    @JsonProperty("role")
+    public String role;
 
-  @JsonProperty("role")
-  public String role;
-
-  @JsonProperty("clientIp")
-  public String clientIp;
+    @JsonProperty("clientIp")
+    public String clientIp;
 }

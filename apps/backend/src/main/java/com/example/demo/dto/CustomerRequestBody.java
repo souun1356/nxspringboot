@@ -11,6 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 public class CustomerRequestBody {
 
-  public String customerId;
-  public String gender;
+    public String customerId;
+    public String gender;
+    public String tel;
 }

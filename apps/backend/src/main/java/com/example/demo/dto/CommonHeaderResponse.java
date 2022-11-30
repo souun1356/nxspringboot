@@ -13,21 +13,21 @@ import lombok.ToString;
 @AllArgsConstructor
 public class CommonHeaderResponse {
 
-  @JsonProperty("funId")
-  public String funId;
+    @JsonProperty("funId")
+    public String funId;
 
-  @JsonProperty("key")
-  public String key;
+    @JsonProperty("key")
+    public String key;
 
-  @JsonProperty("role")
-  public String role;
+    @JsonProperty("role")
+    public String role;
 
-  @JsonProperty("clientIp")
-  public String clientIp;
+    @JsonProperty("clientIp")
+    public String clientIp;
 
-  @JsonProperty("code")
-  public String code;
+    @JsonProperty("code")
+    public String code;
 
-  @JsonProperty("msg")
-  public String msg;
+    @JsonProperty("msg")
+    public String msg;
 }

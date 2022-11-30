@@ -15,9 +15,9 @@ import lombok.ToString;
 @AllArgsConstructor
 public class CustomerResponseDto {
 
-  @JsonProperty("header")
-  public CommonHeaderResponse header;
+    @JsonProperty("header")
+    public CommonHeaderResponse header;
 
-  @JsonProperty("body")
-  public List<CustomerResponseDtoBody> body;
+    @JsonProperty("body")
+    public List<CustomerResponseDtoBody> body;
 }
